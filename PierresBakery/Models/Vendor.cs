@@ -30,6 +30,9 @@ namespace PierresBakery.Models
       return _instances[idQuery-1];
     }
 
-
+    public void AddOrder(Order newOrder)
+    {
+      Orders.Add(newOrder);
+    }
   }
 }

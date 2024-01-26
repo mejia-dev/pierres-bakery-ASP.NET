@@ -9,7 +9,7 @@ namespace PierresBakery.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order testOrder = new Order();
+      Order testOrder = new Order("Widget Order");
       Assert.AreEqual(typeof(Order), testOrder.GetType());
     }
     [TestMethod]

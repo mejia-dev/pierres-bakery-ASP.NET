@@ -74,7 +74,7 @@ namespace PierresBakery.Tests
     public void AddOrder_AssociatesOrderInstanceWithVendorInstance_Void()
     {
       Vendor testVendor = new Vendor("VendorCo.","Is a vendor. Can vend.");
-      Order testOrder = new Order("Widget Order", "Is a widget.");
+      Order testOrder = new Order("Widget Order", "Is a widget.", 1);
       testVendor.AddOrder(testOrder);
       List<Order> expected = new List<Order> { testOrder };
       CollectionAssert.AreEqual(expected,testVendor.Orders);

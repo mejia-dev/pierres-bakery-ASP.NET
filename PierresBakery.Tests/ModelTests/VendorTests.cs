@@ -40,8 +40,9 @@ namespace PierresBakery.Tests
     {
       Vendor testVendor = new Vendor();
       Vendor testVendor2 = new Vendor();
+      Vendor.ClearAll();
       List<Vendor> expected = new List<Vendor> {};
-      CollectionAssert.AreEqual(expected, Vendor.ClearAll());
+      CollectionAssert.AreEqual(expected, Vendor.GetAll());
     }
   }
 

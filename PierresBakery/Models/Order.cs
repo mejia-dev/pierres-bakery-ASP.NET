@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace PierresBakery.Models
@@ -8,6 +9,7 @@ namespace PierresBakery.Models
     public string Title { get; }
     public string Description { get; }
     public int Price { get; }
+    public DateTime Date { get; }
 
     public Order(string title, string description, int price)
     {
@@ -15,6 +17,7 @@ namespace PierresBakery.Models
       Title = title;
       Description = description;
       Price = price;
+      Date = DateTime.Today;
     }
   }
 }

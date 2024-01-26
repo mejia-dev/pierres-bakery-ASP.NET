@@ -12,5 +12,12 @@ namespace PierresBakery.Tests
       Order testOrder = new Order();
       Assert.AreEqual(typeof(Order), testOrder.GetType());
     }
+    [TestMethod]
+    public void GetTitle_GetsTitleOfOrderInstance_String()
+    {
+      string title = "Widget Order";
+      Order testOrder = new Order(title);
+      Assert.AreEqual(title,testOrder.Title);
+    }
   }
 }

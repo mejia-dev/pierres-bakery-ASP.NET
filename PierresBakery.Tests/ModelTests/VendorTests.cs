@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PierresBakery.Models;
 
@@ -18,6 +19,24 @@ namespace PierresBakery.Tests
       Vendor testVendor = new Vendor();
       int result = testVendor.Id;
       Assert.AreEqual(1, result);
+    }
+
+    [TestMethod]
+    public void GetAll_ReturnsVendorInstanceList_Linst()
+    {
+      Vendor testVendor = new Vendor();
+      Vendor testVendor2 = new Vendor();
+      List<Vendor> expected = new List<Vendor> { testVendor, testVendor2 };
+      CollectionAssert.AreEqual(expected, Vendor.GetAll());
+    }
+
+    [TestMethod]
+    public void ClearAll_ClearsVendorInstanceList_Void()
+    {
+      Vendor testVendor = new Vendor();
+      Vendor testVendor2 = new Vendor();
+      List<Vendor> expected = new List<Vendor> {};
+      CollectionAssert.AreEqual(expected, Vendor.ClearAll());
     }
   }
 

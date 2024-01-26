@@ -79,6 +79,15 @@ namespace PierresBakery.Tests
       List<Order> expected = new List<Order> { testOrder };
       CollectionAssert.AreEqual(expected,testVendor.Orders);
     }
+
+    [TestMethod]
+    public void GetDescription_ReturnsDescriptionOfVendorInstance_String()
+    {
+      string desc = "Is a vendor. Can vend.";
+      Vendor testVendor = new Vendor("VendorCo.",desc);
+      Assert.AreEqual(desc, testVendor.Description);
+    }
+    
   }
 
 }

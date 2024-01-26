@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>New Order with @Model.Name - Pierre's Bakery</title>
+</head>
+
+
+<body>
+  
+
+  <h1>Place a new order at @Model.Name:</h1>
+
+  <form action="/vendors/@Model.Id/orders" method="post">
+    <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
+      <h3>New Order Form</h3>
+      <ul>
+        <li>
+          <label for="orderTitle">Order Title</label><br />
+          <input id="orderTitle" name="orderTitle" type="text">
+        </li>
+        <br />
+        <li>
+          <label for="orderDescription">Order Description</label><br />
+          <input id="orderDescription" name="orderDescription" type="text">
+        </li>
+        <br />
+        <li>
+          <label for="orderPrice">Order Price</label><br />
+          <input id="orderPrice" name="orderPrice" type="text">
+        </li>
+        <br />
+        <li>
+          <button type="submit">Place Order</button>
+        </li>
+      </ul>
+    </form>
+
+
+  <br /><br /><br />
+  <a href='/vendors'><button>Return to Vendors List</button></a>
+  <br /><br />
+  <a href='/'><button>Home</button></a>
+</body>
+
+</html>

@@ -34,7 +34,7 @@ namespace PierresBakery.Models
 
     public static Order Find(int idQuery)
     {
-      return _instances[idQuery-1];
+      return _instances[idQuery - 1];
     }
   }
 }

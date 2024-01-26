@@ -8,12 +8,12 @@ namespace PierresBakery.Models
     public List<Order> Orders { get; }
     public string Name { get; }
     public string Description { get; }
-    private static List<Vendor> _instances = new List<Vendor> {};
+    private static List<Vendor> _instances = new List<Vendor> { };
     public Vendor(string name, string description)
     {
       _instances.Add(this);
       Id = _instances.Count;
-      Orders = new List<Order> {};
+      Orders = new List<Order> { };
       Name = name;
       Description = description;
     }
@@ -29,7 +29,7 @@ namespace PierresBakery.Models
 
     public static Vendor Find(int idQuery)
     {
-      return _instances[idQuery-1];
+      return _instances[idQuery - 1];
     }
 
     public void AddOrder(Order newOrder)

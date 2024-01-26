@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using PierresBakery.Models;
+using System.Collections.Generic;
 
 namespace PierresBakery.Controllers
 {
@@ -19,9 +20,9 @@ namespace PierresBakery.Controllers
       }
 
       [HttpPost("/vendors")]
-      public ActionResult Create(string vendorName)
+      public ActionResult Create(string vendorName, string vendorDescription)
       {
-        Vendor newVendor = new Vendor(vendorName);
+        Vendor newVendor = new Vendor(vendorName,vendorDescription);
         return RedirectToAction("Index");
       }
 
@@ -42,7 +43,7 @@ namespace PierresBakery.Controllers
         Dictionary<string, object> model = new Dictionary<string, object>();
         Vendor currentVendor = Vendor.Find(id);
         Order newOrder = new Order(itemTitle, itemDescription, itemPrice);
-        currentVendor.AddItem(newOrder);
+        currentVendor.AddOrder(newOrder);
         List<Order> orders = currentVendor.Orders;
         model.Add("vendor", currentVendor);
         model.Add("orders", orders);

@@ -7,13 +7,15 @@ namespace PierresBakery.Models
     public int Id { get; }
     public List<Order> Orders { get; }
     public string Name { get; }
+    public string Description { get; }
     private static List<Vendor> _instances = new List<Vendor> {};
-    public Vendor(string name)
+    public Vendor(string name, string description)
     {
       _instances.Add(this);
       Id = _instances.Count;
       Orders = new List<Order> {};
       Name = name;
+      Description = description;
     }
     public static List<Vendor> GetAll()
     {

@@ -27,7 +27,7 @@ namespace PierresBakery.Tests
     }
 
     [TestMethod]
-    public void GetAll_ReturnsVendorInstanceList_Linst()
+    public void GetAll_ReturnsVendorInstanceList_List()
     {
       Vendor testVendor = new Vendor();
       Vendor testVendor2 = new Vendor();
@@ -52,6 +52,14 @@ namespace PierresBakery.Tests
       Vendor testVendor2 = new Vendor();
       Vendor result = Vendor.Find(2);
       Assert.AreEqual(testVendor2, result);
+    }
+
+    [TestMethod]
+    public void GetOrders_ReturnsOrderInstancesAssociatedWithVendor_List()
+    {
+      Vendor testVendor = new Vendor();
+      List<Order> expected = new List<Order> {};
+      CollectionAssert.AreEqual(expected,testVendor.Orders);
     }
   }
 

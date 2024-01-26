@@ -31,5 +31,10 @@ namespace PierresBakery.Models
     {
       _instances.Clear();
     }
+
+    public static Order Find(int idQuery)
+    {
+      return _instances[idQuery-1];
+    }
   }
 }

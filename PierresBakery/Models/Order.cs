@@ -10,6 +10,7 @@ namespace PierresBakery.Models
     public string Description { get; }
     public int Price { get; }
     public DateTime Date { get; }
+    public int Id { get; }
 
     public Order(string title, string description, int price)
     {
@@ -18,6 +19,7 @@ namespace PierresBakery.Models
       Description = description;
       Price = price;
       Date = DateTime.Today;
+      Id = _instances.Count;
     }
 
     public static List<Order> GetAll()

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Vendors - Pierre's Bakery</title>
+</head>
+
+<body>
+  @using PierresBakery.Models;
+
+  <h1>List of All Vendors</h1>
+
+  @if (@Model.Count == 0)
+  {
+    <h3>No vendors have been set up yet. Please use the button below to create a vendor.</h3>
+  }
+  else
+  {
+  <ul>
+    @foreach (Vendor vendor in Model)
+    {
+      <li><a href='/vendors/@vendor.Id'>@vendor.Name</a></li>
+    }
+  </ul>
+  }
+
+
+  <p><a href='/'>Back home</a></p>
+</body>
+
+</html>

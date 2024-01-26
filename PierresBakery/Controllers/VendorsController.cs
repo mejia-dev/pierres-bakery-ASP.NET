@@ -10,7 +10,8 @@ namespace PierresBakery.Controllers
       [HttpGet("/vendors")]
       public ActionResult Index()
       {
-        return View();
+        List<Vendor> model = Vendor.GetAll();
+        return View(model);
       }
 
       [HttpGet("/vendors/new")]

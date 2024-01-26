@@ -78,5 +78,14 @@ namespace PierresBakery.Tests
       Order testOrder2 = new Order("Widget Order", "Is a widget.", 1);
       Assert.AreEqual(2, testOrder2.Id);
     }
+
+    [TestMethod]
+    public void Find_ReturnsOrderFromInstanceList_Order()
+    {
+      Order testOrder = new Order("Widget Order", "Is a widget.", 1);
+      Order testOrder2 = new Order("Widget Order", "Is a widget.", 1);
+      Order result = Order.Find(2);
+      Assert.AreEqual(testOrder2, result);
+    }
   }
 }

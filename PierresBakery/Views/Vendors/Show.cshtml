@@ -21,7 +21,7 @@
       @foreach (Order order in Model["orders"])
       {
         <li>
-          <h4>@order.Title</h4>
+          <p><strong>@order.Title</strong></p>
           <ul>
             <li>
               Description: @order.Description
@@ -34,6 +34,7 @@
             </li>
           </ul>
         </li>
+        <br />
       }
     </ol>
   }

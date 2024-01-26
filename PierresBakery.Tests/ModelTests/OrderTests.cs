@@ -1,3 +1,4 @@
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PierresBakery.Models;
 
@@ -35,6 +36,14 @@ namespace PierresBakery.Tests
       int price = 1;
       Order testOrder = new Order("Widget Order", "Is a widget.", price);
       Assert.AreEqual(price, testOrder.Price);
+    }
+
+    [TestMethod]
+    public void GetDate_GetsDateOfOrderInstance_DateTime()
+    {
+      DateTime testDateTime = DateTime.Today;
+      Order testOrder = new Order("Widget Order", "Is a widget.", 1);
+      Assert.AreEqual(testDateTime, testOrder.Date);
     }
   }
 }

@@ -16,12 +16,13 @@
   }
   else
   {
-  <ul>
-    @foreach (Vendor vendor in Model)
-    {
-      <li><a href='/vendors/@vendor.Id'>@vendor.Name</a></li>
-    }
-  </ul>
+    <p>Select a vendor from the list below to place an order, or use the button below to create a new vendor.</p>
+    <ul>
+      @foreach (Vendor vendor in Model)
+      {
+        <li><a href='/vendors/@vendor.Id'>@vendor.Name</a></li>
+      }
+    </ul>
   }
   <br />
   <a href='/vendors/new'><button>Create a Vendor</button></a>

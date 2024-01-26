@@ -70,5 +70,13 @@ namespace PierresBakery.Tests
       List<Order> expected = new List<Order> { };
       CollectionAssert.AreEqual(expected, Order.GetAll());
     }
+
+    [TestMethod]
+    public void GetId_ReturnsOrderInstanceId_Int()
+    {
+      Order testOrder = new Order("Widget Order", "Is a widget.", 1);
+      Order testOrder2 = new Order("Widget Order", "Is a widget.", 1);
+      Assert.AreEqual(2, testOrder2.Id);
+    }
   }
 }

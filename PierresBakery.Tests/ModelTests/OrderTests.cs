@@ -9,7 +9,7 @@ namespace PierresBakery.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order testOrder = new Order("Widget Order", "Is a widget.");
+      Order testOrder = new Order("Widget Order", "Is a widget.", 1);
       Assert.AreEqual(typeof(Order), testOrder.GetType());
     }
 
@@ -17,7 +17,7 @@ namespace PierresBakery.Tests
     public void GetTitle_GetsTitleOfOrderInstance_String()
     {
       string title = "Widget Order";
-      Order testOrder = new Order(title, "Is a widget.");
+      Order testOrder = new Order(title, "Is a widget.", 1);
       Assert.AreEqual(title, testOrder.Title);
     }
 
@@ -25,8 +25,16 @@ namespace PierresBakery.Tests
     public void GetDescription_GetsDescriptionOfOrderInstance_String()
     {
       string desc = "Is a widget.";
-      Order testOrder = new Order("Widget Order", desc);
+      Order testOrder = new Order("Widget Order", desc, 1);
       Assert.AreEqual(desc, testOrder.Description);
+    }
+    
+    [TestMethod]
+    public void GetPrice_GetsPriceOfOrderInstance_Int()
+    {
+      int price = 1;
+      Order testOrder = new Order("Widget Order", "Is a widget.", price);
+      Assert.AreEqual(price, testOrder.Price);
     }
   }
 }

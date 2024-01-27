@@ -8,6 +8,7 @@
 
 <body>
   @using PierresBakery.Models;
+  @await Html.PartialAsync("Header")
 
   <h3>Here is a list of all orders placed with @Model["vendor"].Name:</h3>
 

@@ -7,6 +7,7 @@
 </head>
 
 <body>
+  @await Html.PartialAsync("Header")
   <h1>Add a Vendor</h1>
   <br>
   <form action="/vendors" method="post" class="creationForm">

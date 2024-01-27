@@ -8,13 +8,14 @@
 
 <body>
   @using PierresBakery.Models;
+  @await Html.PartialAsync("Header")
 
   <h1>Hello, Pierre!</h1>
 
   <p>You can use this site to place orders with your vendors.</p>
 
   <p>
-    <a href='/vendors'>Vendors</a>
+    <a href='/vendors'><button>Vendors</button></a>
   </p>
 
 </body>

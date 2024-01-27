@@ -8,28 +8,25 @@
 
 <body>
   @await Html.PartialAsync("Header")
-  <h1>Add a Vendor</h1>
-  <br>
+  <div class="centerAlignBody">
+    <h1>Add a Vendor</h1>
   <form action="/vendors" method="post" class="creationForm">
     <h3>New Vendor Form</h3>
-    <ul>
-      <li>
         <label for="vendorName">Vendor Name*</label><br />
         <input id="vendorName" name="vendorName" type="text" required>
-      </li>
       <br />
-      <li>
+      <br />
         <label for="vendorDescription">Vendor Description</label><br />
         <input id="vendorDescription" name="vendorDescription" type="text">
-      </li>
       <br />
-      <li>
+      <br />
         <button type="submit">Create Vendor</button>
-      </li>
-    </ul>
+      <br />
   </form>
-  <br />
+  <br /><br /><br />
   <a href="/vendors"><button>Back to All Vendors</button></a><br />
+  </div>
+  
 </body>
 
 </html>

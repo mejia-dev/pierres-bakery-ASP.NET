@@ -88,3 +88,17 @@ button {
   font-family: 'Antefand', sans-serif;
   font-size: 200%;
 }
+
+.requiredField {
+  color: #F15152;
+}
+
+#newVendorForm {
+  border-radius: 20px;
+  padding: 10px;
+  border-style: outset;
+  border-color: #1E555C;
+  width: 80%;
+  margin-left: 9%;
+  margin-right: 9%;
+}

@@ -14,15 +14,27 @@ h1 {
   padding: 10px;
 }
 
-#headerBanner > h1 {
-}
+#headerBanner>h1 {}
 
-#headerBannerNavBar > a > button {
+#headerBannerNavBar>a>button {
   border-radius: 10px;
   padding: 10px;
   background-color: #1E555C;
   color: #F4D8CD;
 }
+
 button {
   color: blue;
+}
+
+.vendorListing {
+  border-radius: 20px;
+  padding: 10px;
+  border-style: outset;
+  border-color: #F15152;
+  width: 10%;
+}
+
+.vendorListing > p > a {
+  color: #EDB183;
 }

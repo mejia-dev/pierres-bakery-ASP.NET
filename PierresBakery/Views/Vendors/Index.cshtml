@@ -19,10 +19,10 @@
   else
   {
     <p>Select a vendor from the list below to place an order, or use the button below to create a new vendor.</p>
-    <ul>
+    <div>
       @foreach (Vendor vendor in Model)
       {
-        <li>
+        <div class="vendorListing">
           <p>
             <a href='/vendors/@vendor.Id'>
               @vendor.Name
@@ -30,9 +30,9 @@
             <br />
             <em>@vendor.Description</em>
           </p>
-        </li>
+        </div>
       }
-    </ul>
+    </div>
   }
   <br />
   <a href='/vendors/new'><button>Create a Vendor</button></a>

@@ -11,33 +11,34 @@
   @using PierresBakery.Models;
 
   <h1>List of All Vendors</h1>
-
-  @if (@Model.Count == 0)
-  {
-    <h3>No vendors have been set up yet. Please use the button below to create a vendor.</h3>
-  }
-  else
-  {
-    <p>Select a vendor from the list below to place an order, or use the button below to create a new vendor.</p>
-    <div>
-      @foreach (Vendor vendor in Model)
-      {
-        <div class="vendorListing">
-          <p>
-            <a href='/vendors/@vendor.Id'>
-              @vendor.Name
-            </a>
-            <br />
-            <em>@vendor.Description</em>
-          </p>
-        </div>
-      }
-    </div>
-  }
-  <br />
-  <a href='/vendors/new'><button>Create a Vendor</button></a>
-  <br /><br />
-  <a href='/'><button>Home</button></a>
+  <div class="centerAlignBody">
+    @if (@Model.Count == 0)
+    {
+      <h3>No vendors have been set up yet. Please use the button below to create a vendor.</h3>
+    }
+    else
+    {
+      <p>Select a vendor from the list below to place an order, or use the button below to create a new vendor.</p>
+      <div id="vendorList">
+        @foreach (Vendor vendor in Model)
+        {
+          <div class="vendorListing">
+            <p>
+              <a href='/vendors/@vendor.Id'>
+                @vendor.Name
+              </a>
+              <br />
+              <em>@vendor.Description</em>
+            </p>
+          </div>
+          <br />
+        }
+      </div>
+    }
+    <br />
+    <a href='/vendors/new'><button>Create a Vendor</button></a>
+    <br /><br />
+  </div>
 </body>
 
 </html>

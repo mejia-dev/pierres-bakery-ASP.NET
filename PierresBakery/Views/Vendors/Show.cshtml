@@ -10,6 +10,7 @@
   @using PierresBakery.Models;
   @await Html.PartialAsync("Header")
 
+  <div class="centerAlignBody">
   <h3>Here is a list of all orders placed with @Model["vendor"].Name:</h3>
 
   @if (@Model["orders"].Count == 0)
@@ -19,10 +20,12 @@
   else
   {
     <p>Below is the list of previous orders. To place a new order, use the button below.</p>
-    <ol>
+    <div id="ordersList">
+      <ol>
       @foreach (Order order in Model["orders"])
       {
         <li>
+        <div class="orderListing">
           <p><strong>@order.Title</strong></p>
           <ul>
             <li>
@@ -35,10 +38,12 @@
               Date: @order.Date.ToShortDateString()
             </li>
           </ul>
-        </li>
+        </div>
         <br />
+        </li>
       }
-    </ol>
+      </ol>
+    </div>
   }
 
 
@@ -47,6 +52,7 @@
   <br /><br /><br />
   <a href="/vendors"><button>Back to All Vendors</button></a><br />
   <br />
+  </div>
 </body>
 
 </html>

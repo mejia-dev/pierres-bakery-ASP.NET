@@ -10,40 +10,40 @@
 <body>
   @await Html.PartialAsync("Header")
 
-  <h1>Place a new order at @Model.Name:</h1>
+  <div class="centerAlignBody">
+    <h1>Place a new order at @Model.Name:</h1>
 
-  <form action="/vendors/@Model.Id/orders" method="post">
-    <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
-    <h3>New Order Form</h3>
-    <ul>
-      <li>
+    <form action="/vendors/@Model.Id/orders" method="post">
+      <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
+      <div id="newOrderForm">
+        <h3>New Order Form</h3>
+
         <label for="orderTitle">Order Title</label><br />
         <input id="orderTitle" name="orderTitle" type="text" required>
-      </li>
-      <br />
-      <li>
+        <br />
+        <br />
+
         <label for="orderDescription">Order Description</label><br />
         <input id="orderDescription" name="orderDescription" type="text" required>
-      </li>
-      <br />
-      <li>
+        <br />
+        <br />
+
         <label for="orderPrice">Order Price</label><br />
         <input id="orderPrice" name="orderPrice" type="number" min=1 required>
-      </li>
-      <br />
-      <li>
+        <br />
+        <br />
+
         <button type="submit">Place Order</button>
-      </li>
-    </ul>
-  </form>
+
+      </div>
+    </form>
 
 
-  <br /><br /><br />
-  <a href='/vendors/@Model.Id'><button>Return to @Model.Name</button></a>
-  <br /><br />
-  <a href='/vendors'><button>Return to Vendors List</button></a>
-  <br /><br />
-  <a href='/'><button>Home</button></a>
+    <br /><br /><br />
+    <a href='/vendors/@Model.Id'><button>Return to @Model.Name</button></a>
+    <br /><br />
+    <a href="/vendors"><button>Back to All Vendors</button></a><br />
+  </div>
 </body>
 
 </html>

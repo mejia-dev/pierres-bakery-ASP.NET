@@ -49,4 +49,15 @@ button {
 
 .centerAlignBody {
   text-align: center;
+  align-items: center;
+}
+
+#newOrderForm {
+  border-radius: 20px;
+  padding: 10px;
+  border-style: outset;
+  border-color: #1E555C;
+  width: 80%;
+  margin-left: 9%;
+  margin-right: 9%;
 }

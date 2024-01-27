@@ -1,8 +1,10 @@
+/* Body Styles */
 body {
   background-color: #3A2E39;
-  color: #F4D8CD
+  color: #F4D8CD;
 }
 
+/* Header Styles */
 h1 {
   color: #EDB183;
 }
@@ -17,7 +19,7 @@ h1 {
   align-items: center;
 }
 
-#headerBannerNavBar>a>button {
+#headerBannerNavBar > a > button {
   border-radius: 10px;
   padding: 10px;
   background-color: #1E555C;
@@ -26,6 +28,7 @@ h1 {
   width: 45%;
 }
 
+/* Button Styles */
 button {
   border-radius: 10px;
   padding: 10px;
@@ -34,6 +37,7 @@ button {
   color: #F4D8CD;
 }
 
+/* Vendor Listing Styles */
 .vendorListing {
   border-radius: 20px;
   padding: 10px;
@@ -42,10 +46,11 @@ button {
   width: 10rem;
 }
 
-.vendorListing>p>a {
+.vendorListing > p > a {
   color: #EDB183;
 }
 
+/* Vendor List Styles */
 #vendorList {
   display: flex;
   flex-direction: column;
@@ -53,11 +58,13 @@ button {
   align-items: center;
 }
 
+/* Center Alignment Styles */
 .centerAlignBody {
   text-align: center;
   align-items: center;
 }
 
+/* New Order Form Styles */
 #newOrderForm {
   border-radius: 20px;
   padding: 10px;
@@ -68,6 +75,7 @@ button {
   margin-right: 9%;
 }
 
+/* Orders List Styles */
 #ordersList {
   display: flex;
   flex-direction: column;
@@ -75,6 +83,7 @@ button {
   align-items: center;
 }
 
+/* Order Listing Styles */
 .orderListing {
   border-radius: 20px;
   padding: 10px;
@@ -84,15 +93,18 @@ button {
   text-align: left;
 }
 
+/* Logo Styles */
 #logo {
   font-family: 'Antefand', sans-serif;
   font-size: 200%;
 }
 
+/* Required Field Styles */
 .requiredField {
   color: #F15152;
 }
 
+/* New Vendor Form Styles */
 #newVendorForm {
   border-radius: 20px;
   padding: 10px;
